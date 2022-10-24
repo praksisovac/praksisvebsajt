@@ -4765,13 +4765,25 @@ a {
 
 
 /* Appearance */
-.links {
 
-	border-bottom: 1px solid #0003;
-	box-shadow: 0 0 32px #0003;
-	font-size: 2em;
-	font-weight: 300;
-}
+  .links {
+  	border-bottom: 1px solid #0003;
+  	box-shadow: 0 0 32px #0003;
+  	font-size: 2em;
+  	font-weight: 300;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: auto;
+    padding-top: 10px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    text-align: center;
+  }
+
 .links > a {
 	color: #ffffff;
 	padding: .75em;
@@ -4839,5 +4851,5 @@ body {
 }
 
 .text {
-line-height: 0.4em;
+line-height: 4em;
 }
