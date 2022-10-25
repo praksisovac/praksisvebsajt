@@ -1,0 +1,144 @@
+
+html, body { min-height: 100%; }
+
+body
+{
+  background-image: url("../../pozadina.jpg");
+  font-family: "Times New Roman", Times, serif;
+  font-size: 62.5%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  color: #ffffff;
+  margin: 0;
+}
+.sredina-praksis {
+   text-align: center;
+   font-family: Century, "Times New Roman", Serif;
+   position: absolute;
+   font-weight: bold;
+   left: 0;
+   right: 0;
+   margin: 0 auto;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   color: #ffffff;
+   z-index: 8;
+   padding: 0;
+   width: 80%;
+   top: 12%;
+   font-size: 200%;
+   text-shadow: 3px 3px 3px #000000;
+}
+
+#praksis{
+  text-decoration: underline;
+}
+
+#agencija {
+  text-decoration: none;
+  font-size: 74%;
+  white-space: nowrap;
+}
+
+.content {
+	background-color: #fff;
+	border-radius: 8px;
+	box-sizing: border-box;
+	color: #666;
+	font-size: 1.6em;
+	line-height: 1.4em;
+	margin: 20px auto;
+	margin-top: 80px;
+	padding: 20px;
+	width: 100%;
+	max-width: 800px;
+}
+.content ul {
+	margin: .5em 2em;
+	padding: 0;
+}
+
+
+/* Appearance */
+
+  .links {
+  	border-bottom: 1px solid #0003;
+  	box-shadow: 0 0 32px #0003;
+  	font-size: 2em;
+  	font-weight: 300;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: auto;
+    padding-top: 10px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    text-align: center;
+  }
+
+.links > a {
+	color: #ffffff;
+	padding: 0.75em;
+	text-align: center;
+	text-decoration: none;
+	transition: all .5s;
+}
+.links > a:hover {
+	background: #ffffff06;
+	color: #adf;
+}
+.links > .line {
+	background: #68a;
+	height: 1px;
+	pointer-events: none;
+}
+
+/* The Magic */
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.links {
+	display: grid;
+	grid-template-columns: repeat(var(--items), 1fr);
+	position: relative;
+}
+.links > .line {
+	opacity: 0;
+	transition: all .5s;
+	position: absolute;
+	bottom: 0;
+	left: var(--left, calc(100% / var(--items) * (var(--index) - 1)));
+	width: var(--width, calc(100% / var(--items)));
+	--index: 0;
+}
+.links > a:hover ~ .line {
+	opacity: 1;
+}
+
+.links > a:nth-of-type(1):hover ~ .line { --index: 1; }
+.links > a:nth-of-type(2):hover ~ .line { --index: 2; }
+.links > a:nth-of-type(3):hover ~ .line { --index: 3; }
+.links > a:nth-of-type(4):hover ~ .line { --index: 4; }
+.links > a:nth-of-type(5):hover ~ .line { --index: 5; }
+.links > a:nth-of-type(6):hover ~ .line { --index: 6; }
+.links > a:nth-of-type(7):hover ~ .line { --index: 7; }
+.links > a:nth-of-type(8):hover ~ .line { --index: 8; }
+.links > a:nth-of-type(9):hover ~ .line { --index: 9; }
+.links > a:nth-of-type(10):hover ~ .line { --index: 10; }
+.links > a:last-of-type:hover ~ .line { --index: var(--items); }
+
+
+#onamap
+{
+  white-space: pre-wrap;
+}
+ul {
+margin-bottom: 20px;
+}
